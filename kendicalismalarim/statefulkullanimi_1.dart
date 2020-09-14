@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(
         alignment: Alignment.center,
-        color: Colors.grey[900],
+        color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,7 +47,12 @@ class _HomePageState extends State<HomePage> {
               onPressed: () => arttir(),
               child: Text("Arttır"),
             ),
-            Text("Sayı --> $durum"),
+            Text(
+              "Sayı --> $durum",
+              style: TextStyle(
+                color: durum < 0 ? Colors.red : Colors.green,
+              ),
+            ),
             FlatButton(
               onPressed: () => azalt(),
               child: Text("Azalt"),
