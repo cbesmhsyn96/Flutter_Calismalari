@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 
+//En son bu dersi işledi
+//Bu dersten sonra Scaffold uygulaması yapacak
 class Hello2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

@@ -6,31 +6,13 @@ class ScaffoldOgesi extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
-        title: Text("Naber."),
+        title: Text("Ana Sayfa"),
         backgroundColor: Colors.brown,
         centerTitle: true,
-        actions: [
-          IconButton(
-            icon: Icon(Icons.access_alarm),
-            tooltip: "Alarm",
-            onPressed: () => {
-              print("Alarm."),
-            },
-            color: Colors.white,
-          ),
-          IconButton(
-            icon: Icon(Icons.add_call),
-            tooltip: "Call",
-            onPressed: () => {
-              print("Call."),
-            },
-            disabledColor: Colors.white,
-          ),
-        ],
       ),
       body: Center(
         child: Text(
-          "dewfsdfsdfa",
+          "Bottom Navigation Bar sayfa yönlenme butonları",
           textDirection: TextDirection.ltr,
           style: TextStyle(
             fontSize: 20.0,
@@ -43,20 +25,36 @@ class ScaffoldOgesi extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(Icons.account_balance),
             backgroundColor: Colors.deepPurpleAccent,
-            title: Text("Account balance"),
+            title: Text("İkinci Sayfa"),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add_alarm),
             backgroundColor: Colors.deepPurpleAccent,
-            title: Text("Add Alarm"),
+            title: Text("GridList"),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.airline_seat_recline_extra),
             backgroundColor: Colors.deepPurpleAccent,
-            title: Text("Hava yolu."),
+            title: Text("StatefulSyf"),
           ),
         ],
-        onTap: (int i) => debugPrint("Tıkladığınız butonun indeksi $i"),
+        onTap: (int i) {
+          switch (i) {
+            case 0:
+              Navigator.pushNamed(context, "/ikincisayfa");
+              break;
+            case 1:
+              Navigator.pushNamed(context, "/GridListSayfa");
+              break;
+            case 2:
+              Navigator.pushNamed(context, "/degisenwidget");
+              break;
+
+            default:
+              debugPrint("Ekranın aşağısındaki butonlara basılmadı.");
+              break;
+          }
+        },
       ),
     );
   }

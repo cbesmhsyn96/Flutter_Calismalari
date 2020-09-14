@@ -9,7 +9,7 @@ class Kullan extends StatelessWidget {
         backgroundColor: Colors.purple[700],
         centerTitle: true,
         title: Text(
-          "Drawer ve GridList",
+          "GridView Sayfası",
           style: TextStyle(
             fontSize: 20.0,
             color: Colors.white,
@@ -110,6 +110,11 @@ class Kullan extends StatelessWidget {
         crossAxisCount: 3,
         // Generate 100 widgets that display their index in the List.
         children: [
+          Container(
+            child: Text(
+              "Sayfa yönlenmeleri aşağıda.",
+            ),
+          ),
           Container(
             color: Colors.indigo[900],
             alignment: Alignment.center,
@@ -2202,7 +2207,7 @@ class Kullan extends StatelessWidget {
               color: Colors.white,
             ),
             title: Text(
-              "btn1",
+              "AnaSayfa",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20.0,
@@ -2217,7 +2222,7 @@ class Kullan extends StatelessWidget {
               color: Colors.white,
             ),
             title: Text(
-              "btn2",
+              "2.Sayfa",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20.0,
@@ -2232,7 +2237,7 @@ class Kullan extends StatelessWidget {
               color: Colors.white,
             ),
             title: Text(
-              "btn3",
+              "SttfulSyf",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20.0,
@@ -2244,13 +2249,13 @@ class Kullan extends StatelessWidget {
         onTap: (int i) {
           switch (i) {
             case 0:
-              debugPrint("btn1");
+              Navigator.pushNamed(context, "/");
               break;
             case 1:
-              debugPrint("btn2");
+              Navigator.pushNamed(context, "/ikincisayfa");
               break;
             case 2:
-              debugPrint("btn3");
+              Navigator.pushNamed(context, "/degisenwidget");
               break;
             default:
           }
