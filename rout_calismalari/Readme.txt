@@ -1,0 +1,1 @@
+İlk rout çalışması main2.dart dosyası ve derskodları klasöründeki ilgili sayfalardan oluşmaktadır.
