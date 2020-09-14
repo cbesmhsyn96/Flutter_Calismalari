@@ -34,6 +34,11 @@ class _GridviewSayfasiState extends State<GridviewSayfasi> {
               leading: Icon(Icons.ac_unit),
               onTap: () => Navigator.pushNamed(context, "/"),
             ),
+            ListTile(
+              title: Text("Diğer Sayfa"),
+              leading: Icon(Icons.ac_unit),
+              onTap: () => Navigator.pushNamed(context, "/digersayfa"),
+            ),
           ],
         ),
       ),
@@ -44,25 +49,33 @@ class _GridviewSayfasiState extends State<GridviewSayfasi> {
           mainAxisSpacing: 10,
           padding: EdgeInsets.all(20.0),
           children: [
-            Container(
-              color: Colors.grey,
-              alignment: Alignment.center,
-              child: Text(
-                "Türkiye",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
+            //gesttuuuuuuurreeeeeeeeeeeeeeeeeee operrrassğyonu başlasııığğğğnnnnnn fwrfgergwerg
+            GestureDetector(
+              onTap: () => Navigator.pushNamed(context, "/"),
+              child: Container(
+                color: Colors.teal[200],
+                alignment: Alignment.center,
+                child: Text(
+                  """Tek tıkla Anasayfaya git""",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
                 ),
               ),
             ),
-            Container(
-              color: Colors.grey,
-              alignment: Alignment.center,
-              child: Text(
-                "Türkiye",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
+            GestureDetector(
+              onDoubleTap: () => Navigator.pushNamed(context, "/digersayfa"),
+              child: Container(
+                color: Colors.grey,
+                alignment: Alignment.center,
+                child: Text(
+                  """Türkiye çift tıkla
+                    diğer sayfaya gir.""",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
                 ),
               ),
             ),

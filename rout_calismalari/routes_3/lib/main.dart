@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:routes_3/anasayfa.dart';
 
+import 'anasayfa.dart';
+import 'digersayfa.dart';
 import 'gridviewsayfasi.dart';
 
 main(List<String> args) {
@@ -10,6 +11,7 @@ main(List<String> args) {
       routes: {
         "/": (context) => AnaSayfa(),
         "/gridviewsayfasi": (context) => GridviewSayfasi(),
+        "/digersayfa": (context) => DigerSayfa(),
       },
     ),
   );
